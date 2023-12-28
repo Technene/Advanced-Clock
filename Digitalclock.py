@@ -4,7 +4,7 @@ from tkinter import font, scrolledtext, filedialog, messagebox
 import time
 import datetime
 import math
-import winsound
+import winson
 import threading
 
 class ClockApp:
@@ -212,7 +212,7 @@ class ClockApp:
 if __name__ == "__main__":
     # Ask for user's name before starting the application
     user_name = simpledialog.askstring("Name", "Please enter your name:")
-    
+
     if user_name:
         root = Tk()
         app = ClockApp(root, user_name)
