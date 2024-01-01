@@ -63,9 +63,9 @@ def register():
 @app.route('/profile')
 @login_required
 def profile():
+    # Retrieve the user's cars from the database
     cars = Car.query.filter_by(user_id=current_user.id).all()
     return render_template('profile.html', user=current_user, cars=cars)
-
 
 @app.route('/cars')
 @login_required
