@@ -1,23 +1,50 @@
-The Car Marketplace is a platform that allows users to register, log in, and participate in buying and selling cars. Users can view profiles, list cars for sale, and explore a variety of available vehicles.
+# Car Marketplace
 
+Welcome to the Car Marketplace, a web application designed to simplify the process of buying and selling cars. This platform provides an intuitive interface for users to engage in automotive transactions securely.
+
+## Table of Contents
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [User Registration](#user-registration)
+  - [Car Listing](#car-listing)
+  - [Car Buying](#car-buying)
+  - [User Profile](#user-profile)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
-- **User Authentication:**
-  - Register an account with username, email, and password.
-  - Log in securely with email and password.
-  - Log out to end the session.
+1. **User Authentication:**
+   - Register an account with a unique username, email, and password.
+   - Securely log in and out of your account.
 
-- **Car Listing:**
-  - Users can list their cars for sale.
-  - Each car listing includes details such as name, price, and an image.
+2. **Car Listing:**
+   - Sellers can list their cars for sale with details such as name, price, and an image.
 
-- **Car Buying:**
-  - Users can view all available cars for sale.
-  - Purchase cars they are interested in.
+3. **Car Buying:**
+   - Buyers can browse through available cars, view details, and make purchase decisions.
 
-- **User Profile:**
-  - View user profiles, including username, email, and listed cars (for sellers).
+4. **User Profile:**
+   - Users have profiles displaying their username and email.
+   - Sellers' profiles also showcase the cars they have listed for sale.
 
-- **Responsive Design:**
-  - The application is designed to work well on various devices.
+5. **Responsive Design:**
+   - Enjoy a seamless experience across devices, including desktops, tablets, and smartphones.
+
+## Getting Started
+
+### Prerequisites
+
+- Python (version 3.6 or higher)
+- Flask web framework
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/car-marketplace.git
