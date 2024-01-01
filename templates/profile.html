@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-
 </head>
 <body>
     <h1>User Profile</h1>
@@ -24,21 +23,18 @@
             <p><a href="{{ url_for('logout') }}">Logout</a></p>
         {% endif %}
     {% endif %}
+
     <h3>Your Cars:</h3>
     <div class="row">
         {% for car in cars %}
             <div class="card" style="width: 18rem;">
-                <img src="{{ url_for('static', filename='cars/' + car.name.replace(' ', '%20') + '.jpg') }}" class="card-img-top" alt="{{ car.name }}">
+                <img src="{{ url_for('static', filename='cars/' + car.image_url) }}" class="card-img-top" alt="{{ car.name }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ car.name }}</h5>
                     <p class="card-text">Price: ${{ car.price }}</p>
                 </div>
             </div>
-            <div>
-                <img src ="/workspaces/119727506/project/static/cars/benz (2).jpg" alt="benz (2).jpg">
-            </div>
         {% endfor %}
     </div>
 </body>
 </html>
-
