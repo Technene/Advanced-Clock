@@ -26,14 +26,15 @@
     <h3>Your Cars:</h3>
   <div class="row">
     {% for car in cars %}
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="{{  /workspaces/119727506/project/static/cars/benz (2).jpg}}" class="card-img-top" alt="{{ car.name }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ car.name }}</h5>
-            <p class="card-text">Price: ${{ car.price }}</p>
-          </div>
-        </div>
+    <div class="card" style="width: 18rem;">
+      <img src="{{ url_for('static', filename='cars/' + car.name.replace(' ', '%20') + '.jpg') }}" class="card-img-top" alt="{{ car.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ car.name }}</h5>
+        <p class="card-text">Price: ${{ car.price }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
       </div>
     {% endfor %}
   </div>
