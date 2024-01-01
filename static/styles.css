@@ -45,3 +45,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.user-input{
+  text-decoration: none;
+  height: 5px;
+  
+}
