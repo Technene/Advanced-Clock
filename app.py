@@ -12,7 +12,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  # Use SQLite for si
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
+db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    image_url = db.Column(db.String(200), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
+# Form for adding a new
+class CarForm(FlaskForm):
+    name = StringField('Car Name', validators=[DataRequired()])
+    price = FloatField('Price', validators=[DataRequired()])
 # Define User model for the database
 class User(UserMixin, db.Model):
 class User(UserMixin, db.Model):
@@ -30,17 +40,7 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password, password)
 
 # Define Car model for the database
-class Car(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    price = db.Column(db.Float, nullable=False)
-    image_url = db.Column(db.String(200), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-
-# Form for adding a new
-class CarForm(FlaskForm):
-    name = StringField('Car Name', validators=[DataRequired()])
-    price = FloatField('Price', validators=[DataRequired()])
+class Car(
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
