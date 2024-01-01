@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('templates', filename='style.css') }}">
+
 </head>
 <body>
     <h1>User Profile</h1>
@@ -36,6 +38,7 @@
         {% endfor %}
     </div>
     <a href="{{ url_for('logout') }}">Logout</a>
+    <div class="cars">
     <div class= "car" >
         <img src = "static/cars/benz (2).jpg" alt="car image " >
     </div>
@@ -72,7 +75,6 @@
     <div>
         <img src = "static/cars/vintage.jpg" atl="vintage">
     </div>
-
-
+</div>
 </body>
 </html>
