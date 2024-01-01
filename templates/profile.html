@@ -23,5 +23,19 @@
             <p><a href="{{ url_for('logout') }}">Logout</a></p>
         {% endif %}
     {% endif %}
+    <h3>Your Cars:</h3>
+  <div class="row">
+    {% for car in cars %}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{{ static/cars/benz (2)jpg)}}" class="card-img-top" alt="{{ car.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ car.name }}</h5>
+            <p class="card-text">Price: ${{ car.price }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </body>
 </html>
