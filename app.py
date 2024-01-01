@@ -135,6 +135,9 @@ def load_user(user_id):
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory('static', filename)
 
 if __name__ == '__main__':
     with app.app_context():
