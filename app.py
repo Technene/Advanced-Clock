@@ -33,7 +33,7 @@ class Car(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     price = db.Column(db.Float, nullable=False)
-    image_url = db.Column(db.String(200), nullable=False)
+    image_url = db.Column(db.String(200), nullable=False, default='cars/default_image.jpg')
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
 
