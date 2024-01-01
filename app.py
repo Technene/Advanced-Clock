@@ -142,5 +142,5 @@ def static_files(filename):
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Create database tables before running the app
+        db.create_all()
     app.run(debug=True)
