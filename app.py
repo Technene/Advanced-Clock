@@ -69,6 +69,10 @@ def profile():
     return render_template('profile.html', user=current_user, cars=cars)
 
 
+@app.route('/congrats')
+def congrats():
+    return render_template('congrats.html')
+
 @app.route('/cars')
 @login_required
 def display_cars():
