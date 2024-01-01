@@ -58,10 +58,12 @@ def register():
         return redirect(url_for('login'))
 
     return render_template('register.html')
+
 @app.route('/profile')
 @login_required
 def profile():
-    return render_template('profile.html', user=current_user)
+    cars = Car.query.filter_by(user_id=current_user.id).all()
+    return render_template('profile.html', user=current_user, cars=cars)
 
 
 @app.route('/cars')
