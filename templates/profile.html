@@ -84,8 +84,13 @@
     </div>
     <div>
         <img src = "static/cars/vintage.jpg" atl="vintage">
-        
+
     </div>
 </div>
+<script>
+    function redirectToCongrats() {
+        window.location.href = "{{ url_for('congrats') }}";
+    }
+</script>
 </body>
 </html>
