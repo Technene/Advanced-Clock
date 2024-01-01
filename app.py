@@ -37,7 +37,7 @@ class Car(db.Model):
     image_url = db.Column(db.String(200), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
-# Form for adding a new car
+# Form for adding a new
 class CarForm(FlaskForm):
     name = StringField('Car Name', validators=[DataRequired()])
     price = FloatField('Price', validators=[DataRequired()])
