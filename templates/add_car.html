@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Car for Sale</title>
+</head>
+<body>
+    <h1>Add Car for Sale</h1>
+    <form method="post" action="{{ url_for('add_car') }}">
+        {{ form.hidden_tag() }}
+        <label for="name">Car Name:</label>
+        {{ form.name(class="form-control") }}
+        <br>
+        <label for="price">Price:</label>
+        {{ form.price(class="form-control") }}
+        <br>
+        <button type="submit">Add Car</button>
+    </form>
+</body>
+</html>
