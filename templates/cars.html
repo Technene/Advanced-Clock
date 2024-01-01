@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars for Sale</title>
+</head>
+<body>
+    <h1>Cars for Sale</h1>
+    <ul>
+        {% for car in cars %}
+            <li>{{ car.name }} - Price: ${{ car.price }}
+            {% if current_user.is_seller %}
+                <a href="{{ url_for('sell_car', car_id=car.id) }}">Sell</a>
+            {% else %}
+                <a href="{{ url_for('buy_car', car_id=car.id) }}">Buy</a>
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
