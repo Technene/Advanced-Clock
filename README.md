@@ -1,1 +1,3 @@
-#This web app will allow a user to register or Login into their profile which displays various cars to Buy based on their balance.
+The Car Marketplace is a platform that allows users to register, log in, and participate in buying and selling cars. Users can view profiles, list cars for sale, and explore a variety of available vehicles.
+
+
