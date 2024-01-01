@@ -35,6 +35,22 @@ def display_cars():
     cars = Car.query.all()
     return render_template('cars.html', cars=cars)
 
+@app.route('/buy/<int:car_id>')
+@login_required
+def buy_car(car_id):
+    car = Car.query.get_or_404(car_id)
+    # Implement logic for buying the car (e.g., updating user's owned cars)
+    flash(f'You have successfully bought {car.name} for ${car.price}', 'success')
+    return redirect(url_for('display_cars'))
+
+@app.route('/sell/<int:car_id>')
+@login_required
+def sell_car(car_id):
+    car = Car.query.get_or_404(car_id)
+    # Implement logic for selling the car (e.g., updating car ownership)
+    flash(f'You have successfully listed {car.name} for sale', 'success')
+    return redirect(url_for('display_cars'))
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':

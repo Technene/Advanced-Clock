@@ -18,5 +18,10 @@
             </li>
         {% endfor %}
     </ul>
+    <!-- Inside the <ul> loop in cars.html -->
+
+<a href="{{ url_for('sell_car', car_id=car.id) }}">Sell</a>
+<a href="{{ url_for('buy_car', car_id=car.id) }}">Buy</a>
+
 </body>
 </html>
